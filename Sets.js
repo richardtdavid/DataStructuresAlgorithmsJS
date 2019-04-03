@@ -68,6 +68,7 @@ class mySet {
                 intersectionSet.add(e);
             }
         });
+        return intersectionSet;
     }
 
     // this method will return the difference of two sets as a new set
@@ -92,6 +93,7 @@ class mySet {
     }
 }
 
+// custom set we created 
 let setA = new mySet();
 let setB = new mySet();
 setA.add('a');
@@ -101,3 +103,16 @@ setB.add('a');
 setB.add('d');
 console.log(setA.subset(setB));
 console.log(setA.intersection(setB).values());
+
+// ES6 built in Set 
+let setC = new Set();
+let setD = new Set();
+setA.add('a');
+setB.add('b');
+setB.add('c');
+setB.add('a');
+setB.add('d');
+console.log(setD.values())
+setD.delete('a');
+console.log(setD.has('a'));
+console.log(setD.add('a'));
