@@ -2,22 +2,22 @@
 
 class PriorityQueue{
     constructor(){
-        this.collecion = [];
+        this.collection = [];
     }
 
-    printCollecion(){
-        console.log(this.collecion);
+    printCollection(){
+        console.log(this.collection);
     }
 
     enqueue(element){
         if(this.isEmpty()){
-            this.collecion.push(element);
+            this.collection.push(element);
         }else {
             let added = false;
-            for(let i = 0; i < this.collecion.length; i++){
-                if(element[1] < this.collecion[i][1]){
+            for(let i = 0; i < this.collection.length; i++){
+                if(element[1] < this.collection[i][1]){
                     // checking priorities
-                    this.collecion.splice(i, 0, element);
+                    this.collection.splice(i, 0, element);
                     added = true;
                     break;
                 }
@@ -29,16 +29,16 @@ class PriorityQueue{
     }
 
     dequeue(){
-        let value = this.collecion.shift();
+        let value = this.collection.shift();
         return vlaue[0];
     }
 
     front(){
-        return this.collecion[0];
+        return this.collection[0];
     }
 
     size(){
-        return this.collecion.length;
+        return this.collection.length;
     }
 
     isEmpty(){
